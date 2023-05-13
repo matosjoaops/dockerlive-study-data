@@ -16,6 +16,12 @@ def parse_timestamp(timestamp):
 def delta_to_seconds(delta):
     return int(delta.total_seconds())
 
+def setup_contexts(data):
+    contexts = ["Reading Instructions", "Firefox", "Terminal", "VSCode"]
+    for context in contexts:
+        if context not in data:
+            data[context] = 0
+
 def process_task(filename):
     with open(filename, "r") as file:
         reader = csv.DictReader(file)
@@ -25,6 +31,9 @@ def process_task(filename):
         most_recent_context = None
         last_timestamp = None
         context_switches = 0
+
+        setup_contexts(data)
+
         for row in reader:
             if first_timestamp is None:
                 first_timestamp = parse_timestamp(row["Timestamp"])
@@ -37,32 +46,30 @@ def process_task(filename):
             if most_recent_timestamp is not None and most_recent_context is not None:
                 time_since_last_context_change = parse_timestamp(row["Timestamp"]) - most_recent_timestamp
                 time_in_seconds = delta_to_seconds(time_since_last_context_change)
-                if most_recent_context in data:
-                    data[most_recent_context] += time_in_seconds
-                else:
-                    data[most_recent_context] = time_in_seconds
-
+                data[most_recent_context] += time_in_seconds
+ 
             most_recent_context = row["Context"]
             most_recent_timestamp = parse_timestamp(row["Timestamp"])
             context_switches += 1
         
         context_switches -= 1 #"End" doesn't count
         data["Context Switches"] = context_switches
-        return data
 
-            
+        return data
 
 task_1_data = process_task(f"anon-data/individual-tasks/{participant_id}/task-1.csv")
 task_2_data = process_task(f"anon-data/individual-tasks/{participant_id}/task-2.csv")
 task_3_data = process_task(f"anon-data/individual-tasks/{participant_id}/task-3.csv")
 
-with open(f"anon-data/participants.csv", "a") as new_file:
+with open(f"anon-data/participants.csv", "a") as file:
     rename_keys(task_1_data, 1)
     rename_keys(task_2_data, 2)
     rename_keys(task_3_data, 3)
-    merged_data = task_1_data | task_2_data | task_3_data
+    merged_data = {}
     merged_data["id"] = participant_id
-    values = map(lambda x: str(x) ,merged_data.values())
-    new_file.write(",".join(values))
-    new_file.write("\n")
+    merged_data |= task_1_data | task_2_data | task_3_data
+
+    values = list(map(lambda x: str(x),merged_data.values()))
+
+    file.write(",".join(values) + "\n")
 
