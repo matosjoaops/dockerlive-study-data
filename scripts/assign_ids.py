@@ -19,6 +19,6 @@ new_file_content = ""
 for i in range(len(num_list)):
     new_file_content += participants[i] + "," + str(num_list[i]) + "\n"
 
-new_file = open("data/participant_num.csv", "w")
+new_file = open("data/participant_id.csv", "w")
 
 new_file.write(new_file_content)
