@@ -24,7 +24,7 @@ def anonymize_background(num_assignment):
                 row.pop("What is your name?")
                 email = row["What is your email address?"]
                 row.pop("What is your email address?")
-                row["number"] = num_assignment[email]
+                row["id"] = num_assignment[email]
                 # print()
                 # print(row)
                 if not wrote_header:
