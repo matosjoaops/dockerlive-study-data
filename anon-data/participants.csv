@@ -1,2 +1,6 @@
-id,Reading Instructions (Task 1),Firefox (Task 1),Terminal (Task 1),VSCode (Task 1),Total Duration (Task 1),Context Switches (Task 1),Reading Instructions (Task 2),Firefox (Task 2),Terminal (Task 2),VSCode (Task 2),Total Duration (Task 2),Context Switches (Task 2),Reading Instructions (Task 3),Firefox (Task 3),Terminal (Task 3),VSCode (Task 3),Total Duration (Task 3),Context Switches (Task 3)
-1,65,0,110,90,265,10,197,0,54,253,504,20,60,0,26,36,122,5
+id,Context Switches (Task 1),Total Duration (Task 1),Reading Instructions (Task 1),Firefox (Task 1),Terminal (Task 1),VSCode (Task 1),File Manager (Task 1),File Editor (Task 1),Excluded (Task 1),Context Switches (Task 2),Total Duration (Task 2),Reading Instructions (Task 2),Firefox (Task 2),Terminal (Task 2),VSCode (Task 2),File Manager (Task 2),File Editor (Task 2),Excluded (Task 2),Context Switches (Task 3),Total Duration (Task 3),Reading Instructions (Task 3),Firefox (Task 3),Terminal (Task 3),VSCode (Task 3),File Manager (Task 3),File Editor (Task 3),Excluded (Task 3)
+1,10,265,65,0,110,90,0,0,0,20,504,197,0,54,253,0,0,0,5,122,60,0,26,36,0,0,0
+6,41,1155,67,504,74,510,0,0,0,16,406,156,91,42,117,0,0,0,29,565,23,126,89,319,8,0,0
+7,15,921,70,0,292,559,0,0,0,5,268,108,0,20,140,0,0,0,4,203,39,0,3,155,6,0,0
+9,3,516,85,0,0,415,16,0,57,6,489,204,0,0,285,0,0,0,2,530,41,0,0,489,0,0,0
+11,58,1170,134,203,565,253,12,3,0,41,1200,74,476,210,434,6,0,0,17,298,76,89,57,69,7,0,0
