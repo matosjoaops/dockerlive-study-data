@@ -1,4 +1,6 @@
 import csv
+import os
+import shutil
 
 def anonymize_group(filename, num_assignment):
     with open(f"data/{filename}", "r") as file:
@@ -32,6 +34,20 @@ def anonymize_questionnaire(filename, num_assignment):
                     wrote_header = True
                 writer.writerow(row.values())
 
+def anonymize_dockerfiles(num_assignment):
+    for email, id in num_assignment.items():
+        old_path = f"data/Dockerfiles/{email}"
+        if os.path.exists(old_path):
+            new_path = f"anon-data/Dockerfiles/{id}"
+            os.makedirs(new_path, exist_ok=True)
+
+            tasks = [1, 2, 3]
+            for task in tasks:
+                old_filename = f"{old_path}/Dockerfile.{email}.task-{task}"
+                new_filename = f"{new_path}/Dockerfile.task-{task}"
+                shutil.copy(old_filename, new_filename)
+        else:
+            continue
 
 num_assignment = {}
         
@@ -45,3 +61,4 @@ anonymize_group("experimental.txt", num_assignment)
 anonymize_questionnaire("background.csv", num_assignment)
 anonymize_questionnaire("control_questionnaire.csv", num_assignment)
 anonymize_questionnaire("experimental_questionnaire.csv", num_assignment)
+anonymize_dockerfiles(num_assignment)

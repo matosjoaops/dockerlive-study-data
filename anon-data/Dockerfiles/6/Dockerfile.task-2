@@ -1,0 +1,18 @@
+FROM node
+
+COPY package*.json .
+
+WORKDIR /helloworld
+
+COPY important_info.txt .
+
+COPY important_info2.txt /
+
+
+WORKDIR /byeWorld
+
+COPY file.js .
+
+USER nobody
+
+CMD node file.js

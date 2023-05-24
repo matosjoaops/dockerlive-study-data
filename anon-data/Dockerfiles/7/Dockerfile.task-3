@@ -1,0 +1,14 @@
+FROM node:18-slim
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN npm install --only=production
+
+
+USER node
+
+COPY --chown=node:node . .
+
+CMD node index.js

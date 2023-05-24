@@ -1,0 +1,15 @@
+FROM node
+
+COPY package*.json .
+
+WORKDIR /secure
+
+COPY important_info.txt .
+
+WORKDIR /
+
+COPY important_info2.txt /
+
+COPY file.js .
+
+CMD node file.js

@@ -1,0 +1,21 @@
+FROM node as build
+
+WORKDIR /buildenv
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+
+FROM node:alpine as runtime
+
+ENV NODE_ENV=production
+
+COPY --from=build /buildenv/node_modules ./node_modules
+COPY --from=build /buildenv/index.js ./index.js
+
+EXPOSE 3000
+
+CMD node index.js

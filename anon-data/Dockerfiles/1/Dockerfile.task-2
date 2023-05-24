@@ -1,0 +1,13 @@
+FROM node
+
+COPY package*.json .
+
+COPY important_info.txt .
+
+COPY important_info2.txt /
+
+RUN mkdir hide_files && mv important_info* hide_files
+
+COPY file.js .
+
+CMD node file.js

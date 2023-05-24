@@ -1,0 +1,21 @@
+FROM python:3.9-alpine as build
+
+WORKDIR /python
+
+RUN apk add  httpie
+
+RUN http http://example.com -o file.html
+
+FROM python:3.9-alpine as runtime 
+
+COPY requirements.txt requirements.txt
+
+RUN pip install -r requirements.txt
+
+RUN rm requirements.txt
+
+COPY . .
+
+COPY --from=build /python/file.html ./file.html
+
+CMD python3 main.py

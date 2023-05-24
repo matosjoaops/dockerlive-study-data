@@ -1,0 +1,12 @@
+FROM python:3.11-slim
+
+COPY requirements.txt ./
+
+RUN pip install -r requirements.txt \
+	&& apt-get update && apt-get install --no-install-recommends -y httpie \
+    && http http://example.com -o file.html \
+	&& rm -rf /var/lib/apt/lists/*
+
+COPY main.py ./
+
+CMD python3 main.py
