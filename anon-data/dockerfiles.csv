@@ -1,0 +1,6 @@
+id,Image Size (Task 1),Successful Build? (Task 1),Successful Execution? (Task 1),Successful Build? (Task 2),Successful Execution? (Task 2),Notes (Task 2),Successful Build? (Task 3),Successful Execution? (Task 3),Notes (Task 3)
+1,962,Yes,Yes,Yes,Yes,Created a separate directory and moved the files there.,Yes,Yes,Added npm install but did not remove useless nodejs installation.
+6,56.4,Yes,Yes,Yes,Yes,Changed the working directory twice and changed user.,Yes,Yes,Added npm install and removed useless nodejs installation and used multi-stage build.
+7,178,Yes,Yes,Yes,Yes,Changed the working directory and the user.,Yes,Yes,Added npm install and removed the useless nodejs installation.
+9,177,Yes,Yes,Yes,Yes,Changed the working directory and the user.,Yes,Yes,Added npm install and removed the useless nodejs installation.
+11,142,Yes,Yes,Yes,No,One of the files is still accessed and the working directory is changed twice and the user is not changed.,Yes,Yes,Added npm install and removed the useless nodejs installation.
