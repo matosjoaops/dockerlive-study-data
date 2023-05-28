@@ -1,0 +1,17 @@
+FROM node:18-slim
+
+WORKDIR /app
+
+COPY package*.json .
+
+RUN npm install --only=production
+
+COPY important_info.txt .
+
+COPY important_info2.txt /
+
+COPY file.js .
+
+USER node
+
+CMD node file.js
