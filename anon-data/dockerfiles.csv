@@ -4,3 +4,4 @@ id,Image Size (Task 1),Successful Build? (Task 1),Successful Execution? (Task 1)
 7,178,Yes,Yes,Yes,Yes,Changed the working directory and the user.,Yes,Yes,Added npm install and removed the useless nodejs installation.
 9,177,Yes,Yes,Yes,Yes,Changed the working directory and the user.,Yes,Yes,Added npm install and removed the useless nodejs installation.
 11,142,Yes,Yes,Yes,No,One of the files is still accessed and the working directory is changed twice and the user is not changed.,Yes,Yes,Added npm install and removed the useless nodejs installation.
+14,178,Yes,Yes,Yes,Yes,Changed the working directory and the user.,Yes,Yes,Added npm install and removed the useless nodejs installation.
