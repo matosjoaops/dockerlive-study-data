@@ -1,17 +1,17 @@
-What is your current role?,Approximately how many years of professional experience do you have in software development and related tasks?,Approximately how many years of professional experience do you have developing Dockerfiles?,Approximately how many Dockerfiles have you written from scratch into a working first version?,Approximately how many Dockerfiles have you edited?,id
-Developer,16-20,2,4-6,4-6,2
-SRE,11-15,5 or more,10 or more,10 or more,15
-Operations,11-15,5 or more,10 or more,10 or more,7
-Architect,6-10,4,4-6,10 or more,1
-Developer,6-10,2,1-3,10 or more,14
-Architect,21 or more,5 or more,10 or more,10 or more,3
-Developer,5 or less,2,1-3,4-6,16
-Operations,5 or less,3,10 or more,10 or more,6
-Operations,5 or less,2,10 or more,7-9,5
-Developer,5 or less,2,4-6,10 or more,8
-Developer,5 or less,3,4-6,4-6,11
-DevOps,5 or less,1 or less,4-6,4-6,12
-Developer,5 or less,3,7-9,10 or more,4
-Head of Innovation,21 or more,1 or less,1-3,1-3,9
-Architect,21 or more,2,10 or more,10 or more,10
-Architect,21 or more,1 or less,1-3,1-3,13
+What is your current role?,Approximately how many years of professional experience do you have in software development and related tasks?,Approximately how many years of professional experience do you have developing Dockerfiles?,Approximately how many Dockerfiles have you written from scratch into a working first version?,Approximately how many Dockerfiles have you edited?,Have you ever used a Visual Studio Code extension to edit Dockerfiles?,"If your answer to the previous question was ""Yes"", please write the name of the extension(s) that you used.",id
+Developer,16-20,2,4-6,4-6,,,2
+SRE,11-15,5 or more,10 or more,10 or more,,,15
+Operations,11-15,5 or more,10 or more,10 or more,Yes,Official Docker extension,7
+Architect,6-10,4,4-6,10 or more,Yes,Unknown extension for syntax highlighting,1
+Developer,6-10,2,1-3,10 or more,Yes,Official Docker extension,14
+Architect,21 or more,5 or more,10 or more,10 or more,,,3
+Developer,5 or less,2,1-3,4-6,,,16
+Operations,5 or less,3,10 or more,10 or more,Yes,Official Docker extension,6
+Operations,5 or less,2,10 or more,7-9,,,5
+Developer,5 or less,2,4-6,10 or more,,,8
+Developer,5 or less,3,4-6,4-6,Yes,Official Docker extension,11
+DevOps,5 or less,1 or less,4-6,4-6,,,12
+Developer,5 or less,3,7-9,10 or more,,,4
+Head of Innovation,21 or more,1 or less,1-3,1-3,No,,9
+Architect,21 or more,2,10 or more,10 or more,,,10
+Architect,21 or more,1 or less,1-3,1-3,,,13

@@ -21,6 +21,11 @@ def anonymize_questionnaire(filename, num_assignment):
             writer = csv.writer(new_file)
             wrote_header = False
             for row in reader:
+                for key in row:
+                    value = row[key]
+                    if "\n" in value:
+                        row[key] = value.replace("\n",";")
+
                 row.pop("Carimbo de data/hora")
                 if "Are you willing and interested to participate in this study?" in row:
                     row.pop("Are you willing and interested to participate in this study?")
